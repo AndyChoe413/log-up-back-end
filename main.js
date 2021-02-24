@@ -12,11 +12,29 @@ const password3 = 'like a BOSS';
 
 
 // **YOUR** code below. Pass those tests!
+const isValidEmail = email => {
+  if (email.endsWith('@codeimmersives.com') && email.length >= 20) {
+    return true
+  }
+  return false
+}
 
+const isValidPassword = str => {
+  return str.length >= 8 && str.toUpperCase() !== str && str.toLowerCase() !== str
+  }
 
+const isRegisteredUser = email => {
+    return email === user1 || email === user2 || email === user3
+  }
 
-
-
+const passwordMatches = (email,password) => {
+  return (
+    (email === user1 && password === password1) ||
+    (email === user2 && password === password2) ||
+    (email === user3 && password === password3)
+  );
+}
+    
 
 // Our code below. Do not touch!
 
